@@ -28,13 +28,6 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: OnePage
-  * Template URL: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/
-  * Updated: Mar 17 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -81,53 +74,31 @@
     </div>
   </header><!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
-    <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
-      <div class="row justify-content-center">
-        <div class="col-xl-7 col-lg-9 text-center">
-          <h1>Find Your Way Easily</h1>
-          <h2>with our Tools</h2>
-        </div>
-      </div>
-      <div class="text-center">
-        <p>Find Your Way, translate your language, and get exchange rate in any country</p>
-      </div>
 
-      <div class="row icon-boxes">
-
-        <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="400">
-          <div class="icon-box">
-            <div class="icon"><i class="ri-map-pin-fill"></i></div>
-            <h4 class="title"><a href="location.html">Find Your Location</a></h4>
-            <p class="description">Finding a particular city, state, province, country can be hard but we have built it easily for you!</p>
-          </div>
-        </div>
-        
-        <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
-          <div class="icon-box">
-            <div class="icon"><i class="ri-translate"></i></div>
-            <h4 class="title"><a href="language.html">Translate Your language</a></h4>
-            <p class="description">Translate any language easily and use our Text-to-speech</p>
-          </div>
-        </div>
-
-        
-
-        <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="300">
-          <div class="icon-box">
-            <div class="icon"><i class="ri-wallet-3-fill"></i></div>
-            <h4 class="title"><a href="rate.html">Check Out Exchange Rate</a></h4>
-            <p class="description">With our timely api tool, getting the current exchange rate is just a click away</p>
-          </div>
-        </div>
-
-       
-      </div>
-    </div>
-  </section><!-- End Hero -->
 
   <main id="main">
+
+
+    <section id="about" class="formclass">
+       <div class="container" data-aos="fade-up">
+      <h3>Select Country State and City</h3>
+      <div class="select_option">
+          <select class="form-select country" aria-label="Default select example" onchange="loadStates()">
+              <option selected>Select Country</option>
+          </select><br />
+          <select class="form-select state" aria-label="Default select example" onchange="loadCities()">
+              <option selected>Select State</option>
+          </select><br />
+          <select class="form-select city" aria-label="Default select example">
+              <option selected>Select City</option>
+          </select>
+      </div>
+  </div>
+</section>
+
+
+
+
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
@@ -162,6 +133,12 @@
 
       </div>
     </section><!-- End About Section -->
+
+
+
+
+
+
 
     <!-- ======= Counts Section ======= -->
     <section id="counts" class="counts section-bg">
@@ -287,6 +264,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="countyselection.js"></script>
 
 </body>
 

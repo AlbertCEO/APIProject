@@ -27,14 +27,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: OnePage
-  * Template URL: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/
-  * Updated: Mar 17 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -44,36 +37,12 @@
     <div class="container d-flex align-items-center justify-content-between">
 
       <h1 class="logo"><a href="index.html">FindWay</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
 
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <!-- <li><a class="nav-link scrollto" href="#services">Services</a></li> -->
-          <!-- <li><a class="nav-link scrollto o" href="#portfolio">Portfolio</a></li> -->
-          <!-- <li><a class="nav-link scrollto" href="#team">Team</a></li> -->
-          <!-- <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li> -->
-          <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a> -->
-            <!-- <ul> -->
-              <!-- <li><a href="#">Drop Down 1</a></li> -->
-              <!-- <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a> -->
-                <!-- <ul> -->
-                  <!-- <li><a href="#">Deep Drop Down 1</a></li> -->
-                  <!-- <li><a href="#">Deep Drop Down 2</a></li> -->
-                  <!-- <li><a href="#">Deep Drop Down 3</a></li> -->
-                  <!-- <li><a href="#">Deep Drop Down 4</a></li> -->
-                  <!-- <li><a href="#">Deep Drop Down 5</a></li> -->
-                <!-- </ul> -->
-              <!-- </li> -->
-              <!-- <li><a href="#">Drop Down 2</a></li> -->
-              <!-- <li><a href="#">Drop Down 3</a></li> -->
-              <!-- <li><a href="#">Drop Down 4</a></li> -->
-            <!-- </ul> -->
-          <!-- </li> -->
-          <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
-          <!-- <li><a class="getstarted scrollto" href="#about">Get Started</a></li> -->
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -81,53 +50,50 @@
     </div>
   </header><!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
-    <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
-      <div class="row justify-content-center">
-        <div class="col-xl-7 col-lg-9 text-center">
-          <h1>Find Your Way Easily</h1>
-          <h2>with our Tools</h2>
-        </div>
-      </div>
-      <div class="text-center">
-        <p>Find Your Way, translate your language, and get exchange rate in any country</p>
-      </div>
 
-      <div class="row icon-boxes">
-
-        <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="400">
-          <div class="icon-box">
-            <div class="icon"><i class="ri-map-pin-fill"></i></div>
-            <h4 class="title"><a href="location.html">Find Your Location</a></h4>
-            <p class="description">Finding a particular city, state, province, country can be hard but we have built it easily for you!</p>
-          </div>
-        </div>
-        
-        <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
-          <div class="icon-box">
-            <div class="icon"><i class="ri-translate"></i></div>
-            <h4 class="title"><a href="language.html">Translate Your language</a></h4>
-            <p class="description">Translate any language easily and use our Text-to-speech</p>
-          </div>
-        </div>
-
-        
-
-        <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="300">
-          <div class="icon-box">
-            <div class="icon"><i class="ri-wallet-3-fill"></i></div>
-            <h4 class="title"><a href="rate.html">Check Out Exchange Rate</a></h4>
-            <p class="description">With our timely api tool, getting the current exchange rate is just a click away</p>
-          </div>
-        </div>
-
-       
-      </div>
-    </div>
-  </section><!-- End Hero -->
 
   <main id="main">
+
+    <section>
+      <div>
+
+        <div class="container">
+          <div class="wrapper">
+            <div class="text-input">
+              <textarea spellcheck="false" class="from-text" placeholder="Enter text"></textarea>
+              <textarea spellcheck="false" readonly disabled class="to-text" placeholder="Translation"></textarea>
+            </div>
+            <ul class="controls">
+              <li class="row from">
+                <div class="icons">
+                  <i id="from" class="fas fa-volume-up"></i>
+                  <i id="from" class="fas fa-copy"></i>
+                </div>
+                <select></select>
+              </li>
+              <li class="exchange"><i class="fas fa-exchange-alt"></i></li>
+              <li class="row to">
+                <select></select>
+                <div class="icons">
+                  <i id="to" class="fas fa-volume-up"></i>
+                  <i id="to" class="fas fa-copy"></i>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <button>Translate Text</button>
+        </div>
+
+
+
+
+
+
+        </div>
+        </section>
+
+
+
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
@@ -287,6 +253,8 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/countries.js"></script>
+    <script src="assets/js/script.js"></script>
 
 </body>
 

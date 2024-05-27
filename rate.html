@@ -27,14 +27,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: OnePage
-  * Template URL: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/
-  * Updated: Mar 17 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -81,53 +74,84 @@
     </div>
   </header><!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
-    <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
-      <div class="row justify-content-center">
-        <div class="col-xl-7 col-lg-9 text-center">
-          <h1>Find Your Way Easily</h1>
-          <h2>with our Tools</h2>
-        </div>
-      </div>
-      <div class="text-center">
-        <p>Find Your Way, translate your language, and get exchange rate in any country</p>
-      </div>
 
-      <div class="row icon-boxes">
-
-        <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="400">
-          <div class="icon-box">
-            <div class="icon"><i class="ri-map-pin-fill"></i></div>
-            <h4 class="title"><a href="location.html">Find Your Location</a></h4>
-            <p class="description">Finding a particular city, state, province, country can be hard but we have built it easily for you!</p>
-          </div>
-        </div>
-        
-        <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
-          <div class="icon-box">
-            <div class="icon"><i class="ri-translate"></i></div>
-            <h4 class="title"><a href="language.html">Translate Your language</a></h4>
-            <p class="description">Translate any language easily and use our Text-to-speech</p>
-          </div>
-        </div>
-
-        
-
-        <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="300">
-          <div class="icon-box">
-            <div class="icon"><i class="ri-wallet-3-fill"></i></div>
-            <h4 class="title"><a href="rate.html">Check Out Exchange Rate</a></h4>
-            <p class="description">With our timely api tool, getting the current exchange rate is just a click away</p>
-          </div>
-        </div>
-
-       
-      </div>
-    </div>
-  </section><!-- End Hero -->
 
   <main id="main">
+
+    <section id="about" class="formclass">
+      <div class="container">
+      <h1 class="section-title" id="currency"></h1>
+      <form>
+        <div class="row g-3 c">
+         <div class="col-lg-4">
+            <!-- <label for="firstName" class="form-label">Amount</label> -->
+            <input type="text" class="form-control" id="amount" placeholder="Your Amount" value="" required>
+            <div class="invalid-feedback">
+              
+            </div>
+            </div>
+         <div class="col-lg-4">
+            <!-- <label for="base" class="form-label">First Currency</label> -->
+                <select id="base" class="form-control">
+                  <option selected>Select Currency</option>
+                  <option id="base">CAD</option>
+                  <option id="base">USD</option>
+                  <option id="base">AUD</option>
+                  <option id="base">CNY</option>
+                  <option id="base">CZK</option>
+                  <option id="base">EGP</option>
+                  <option id="base">EUR</option>
+                  <option id="base">GHS</option>
+                  <option id="base">INR</option>
+                  <option id="base">JPY</option>
+                  <option id="base">NAD</option>
+                  <option id="base">NGN</option>
+                  <option id="base">QAR</option>
+                  <option id="base">CHF</option>
+                  <option id="base">GBP</option>
+                  </select>
+          </div>
+          
+         <div class="col-lg-4">
+            <!-- <label for="base" class="form-label">Second Currency</label> -->
+                <select id="symbols" class="form-control">
+                  <option selected>Select Currency</option>
+                  <option id="symbols">USD</option>
+                  <option id="symbols">AUD</option>
+                  <option id="symbols">CNY</option>
+                  <option id="symbols">CZK</option>
+                  <option id="symbols">EGP</option>
+                  <option id="symbols">EUR</option>
+                  <option id="symbols">GHS</option>
+                  <option id="symbols">INR</option>
+                  <option id="symbols">JPY</option>
+                  <option id="symbols">NAD</option>
+                  <option id="symbols">NGN</option>
+                  <option id="symbols">QAR</option>
+                  <option id="symbols">CHF</option>
+                  <option id="symbols">GBP</option>
+                  </select>
+          </div>
+         
+          </div>
+          <br />
+          <button type="button" class="w-80 btn btn-primary btn-lg" onclick="Calc()" id="btn1" >Compute Conversion</button>
+          
+        </form>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
@@ -276,6 +300,10 @@
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+
+
+
+
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
@@ -287,6 +315,17 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="currency.js"></script>
+
+  <script>
+
+    $(document).ready(function(){
+  $("#btn1").click(function(){
+    Calc();
+  });
+});
+    
+  </script>
 
 </body>
 
