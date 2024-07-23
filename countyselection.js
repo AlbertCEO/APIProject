@@ -9,7 +9,13 @@ var countrySelect = document.querySelector('.country'),
     citySelect = document.querySelector('.city')
 
 
+
+
+
+
 function loadCountries() {
+
+    console.log(countrySelect)
 
     let apiEndPoint = config.cUrl
 
@@ -23,6 +29,7 @@ function loadCountries() {
             option.value = country.iso2
             option.textContent = country.name 
             countrySelect.appendChild(option)
+
         })
     })
     .catch(error => console.error('Error loading countries:', error))
@@ -86,3 +93,11 @@ function loadCities() {
 }
 
 window.onload = loadCountries
+
+country = document.querySelector('.country')
+var state = document.getElementById('state').value;
+var city = document.getElementById('city').value;
+
+const handleSend = () => {
+    alert (country)
+}

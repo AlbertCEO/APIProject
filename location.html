@@ -89,28 +89,38 @@
       <section id="about" class="formclass">
         <div class="container" data-aos="fade-up">
           <h3>Select Country State and City</h3>
+          <form onsubmit="handleSend()">
           <div class="select_option">
             <select
               class="form-select country"
               aria-label="Default select example"
               onchange="loadStates()"
+              id="country"
             >
-              <option selected>Select Country</option></select
-            ><br />
+              <option  >Select Country</option></select
+            >
+            
+            <br />
             <select
               class="form-select state"
               aria-label="Default select example"
               onchange="loadCities()"
+              id="state"
             >
               <option selected>Select State</option></select
-            ><br />
+            >
+            
+            <br />
             <select
               class="form-select city"
               aria-label="Default select example"
+              id="city"
             >
               <option selected>Select City</option>
             </select>
-          </div>
+          </div><br />
+         
+        </form>
         </div>
       </section>
 
