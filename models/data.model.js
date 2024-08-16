@@ -1,5 +1,5 @@
-const express = require('express')
-const mongoose = require('mongoose')
+import express from 'express'
+import mongoose from 'mongoose'
 
 
 
@@ -13,3 +13,5 @@ const dataSchema = new mongoose.Schema({
 )
 
 const Data = mongoose.model("Data", dataSchema)
+
+export default Data

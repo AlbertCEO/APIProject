@@ -23,6 +23,7 @@ const signIn = document.getElementById("signIn");
 const signOutButton = document.getElementById("signOutButton");
 const userName = document.getElementById("username");
 const userEmail = document.getElementById("email");
+const hideButton = document.getElementById("hideButton");
 
 
 
@@ -69,23 +70,20 @@ onAuthStateChanged(auth, (user) => {
     signOutButton.style.display = "block";
     userName.innerHTML = user.displayName;
     userEmail.innerHTML = user.email
+    hideButton.style.display = "block"
     // signIn.innerHTML = "LogOut"
   } else {
     signOutButton.style.display = "none";
     // signIn.style.display = "none";
     signIn.innerText = "Login"
+    hideButton.style.display = "none"
   }
 
 
 })
 
-
-
-
-
 signInButton.addEventListener('click', userSignIn);
 signOutButton.addEventListener('click', userSignOut);
-
 
 
 
